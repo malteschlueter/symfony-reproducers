@@ -5,11 +5,8 @@
         "php": ">=7.1.3",
         "ext-ctype": "*",
         "ext-iconv": "*",
-        "symfony/console": "4.4.*",
-        "symfony/dotenv": "4.4.*",
         "symfony/flex": "^1.3.1",
-        "symfony/framework-bundle": "4.4.*",
-        "symfony/yaml": "4.4.*"
+        "symfony/symfony": "dev-bugfix/dependency-injection-default-index-method-not-working as 4.4.99"
     },
     "require-dev": {
         "symfony/phpunit-bridge": "^5.1"
@@ -50,13 +47,16 @@
             "@auto-scripts"
         ]
     },
-    "conflict": {
-        "symfony/symfony": "*"
-    },
     "extra": {
         "symfony": {
             "allow-contrib": false,
             "require": "4.4.*"
         }
+    },
+    "repositories": [
+        {
+            "url": "https://github.com/malteschlueter/symfony.git",
+            "type": "vcs"
     }
+    ]
 }
