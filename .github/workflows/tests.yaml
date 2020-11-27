@@ -1,0 +1,27 @@
+name: Tests
+
+on:
+    push:
+    pull_request:
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            -   uses: actions/checkout@v2
+
+            -   name: Cache Composer packages
+                id: composer-cache
+                uses: actions/cache@v2
+                with:
+                    path: vendor
+                    key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
+                    restore-keys: |
+                        ${{ runner.os }}-php-
+
+#            -   name: Install php dependencies
+#                if: steps.composer-cache.outputs.cache-hit != 'true'
+#                uses: php-actions/composer@v4
+
+#            -   name: Run test suite
+#                run: php bin/phpunit --coverage-text --coverage-html=coverage --log-junit=report.xml
