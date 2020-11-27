@@ -19,9 +19,9 @@ jobs:
                     restore-keys: |
                         ${{ runner.os }}-php-
 
-#            -   name: Install php dependencies
-#                if: steps.composer-cache.outputs.cache-hit != 'true'
-#                uses: php-actions/composer@v4
+            -   name: Install php dependencies
+                if: steps.composer-cache.outputs.cache-hit != 'true'
+                run: composer install
 
-#            -   name: Run test suite
-#                run: php bin/phpunit --coverage-text --coverage-html=coverage --log-junit=report.xml
+            -   name: Run test suite
+                run: php bin/phpunit --coverage-text --coverage-html=coverage --log-junit=report.xml
