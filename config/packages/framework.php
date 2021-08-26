@@ -24,6 +24,8 @@ return static function (FrameworkConfig $framework, ContainerConfigurator $conta
     ;
 
     if ($container->env() === 'test') {
+        $framework->secret('static-test-secret');
+
         $framework->test(true);
 
         $framework->session()

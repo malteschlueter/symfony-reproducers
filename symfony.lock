@@ -1,4 +1,21 @@
 {
+    "artprima/prometheus-metrics-bundle": {
+        "version": "1.0",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "master",
+            "version": "1.0",
+            "ref": "a07f1cab0b63419f2153b744a254d9d6c3d732e9"
+        },
+        "files": [
+            "config/packages/prometheus_metrics.yaml",
+            "config/packages/test/prometheus_metrics.yaml",
+            "config/routes/metrics.yaml"
+        ]
+    },
+    "promphp/prometheus_client_php": {
+        "version": "v2.2.2"
+    },
     "psr/cache": {
         "version": "2.0.0"
     },
@@ -95,6 +112,9 @@
     },
     "symfony/http-kernel": {
         "version": "v5.3.6"
+    },
+    "symfony/polyfill-apcu": {
+        "version": "v1.23.0"
     },
     "symfony/polyfill-intl-grapheme": {
         "version": "v1.23.1"
