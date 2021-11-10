@@ -1,0 +1,9 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+
+    App\Tests\Fake\:
+        resource: '../tests/Fake/'
+
+    App\Repository\ServiceCheck: '@App\Tests\Fake\FakeServiceCheck'
