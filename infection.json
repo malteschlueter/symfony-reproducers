@@ -1,0 +1,27 @@
+{
+    "source": {
+        "directories": [
+            ".\/src\/"
+        ],
+        "excludes": [
+            "Kernel.php"
+        ]
+    },
+    "timeout": 10,
+    "logs": {
+        "debug": "php://stdout",
+        "text": "php://stdout",
+        "summary": "php://stdout"
+    },
+    "tmpDir": ".\/var/cache",
+    "mutators": {
+        "MethodCallRemoval": {
+            "ignoreSourceCodeByRegex": [
+                "Assert::.*"
+            ]
+        },
+        "@default": true
+    },
+    "minMsi": 99,
+    "testFramework":"phpunit"
+}
