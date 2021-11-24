@@ -3,11 +3,17 @@
     "license": "proprietary",
     "minimum-stability": "dev",
     "prefer-stable": true,
+    "repositories": [
+        {
+            "url": "https://github.com/malteschlueter/symfony-serializer",
+            "type": "git"
+        }
+    ],
     "require": {
         "php": ">=8.0",
         "symfony/flex": "^1.3.1",
         "symfony/property-info": "5.3.*",
-        "symfony/serializer": "5.3.*"
+        "symfony/serializer": "dev-bugfix/name-converter"
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^3.3",
