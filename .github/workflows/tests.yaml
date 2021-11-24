@@ -6,8 +6,13 @@ on:
 
 jobs:
     build:
-        runs-on: ubuntu-latest
+        runs-on: ubuntu-20.04
         steps:
+            -   name: Setup PHP
+                uses: shivammathur/setup-php@v2
+                with:
+                    php-version: '8.0'
+
             -   uses: actions/checkout@v2
 
             -   name: Cache Composer packages
@@ -19,9 +24,8 @@ jobs:
                     restore-keys: |
                         ${{ runner.os }}-php-
 
-#            -   name: Install php dependencies
-#                if: steps.composer-cache.outputs.cache-hit != 'true'
-#                uses: php-actions/composer@v4
+            -   name: Install php dependencies
+                uses: php-actions/composer@v6
 
-#            -   name: Run test suite
-#                run: php bin/phpunit --coverage-text --coverage-html=coverage --log-junit=report.xml
+            -   name: Run test suite
+                uses: php-actions/phpunit@v3
