@@ -1,3 +1,5 @@
-# A repository that is used to reproduce Symfony bugs.
+# rectorphp/rector-symfony
 
-Switch branch for different "demos".
+## Feature: Migrate route configuration from yaml to annotation
+
+This is a application to support the development of [rectorphp/rector-symfony#168](https://github.com/rectorphp/rector-symfony/issues/168).

@@ -1,0 +1,25 @@
+{
+    "name": "malteschlueter/dev-ops",
+    "description": "Dev-Ops",
+    "type": "project",
+    "license": "proprietary",
+    "require": {
+        "php": ">=7.4",
+        "friendsofphp/php-cs-fixer": "^3.4"
+    },
+    "config": {
+        "platform": {
+            "php": "7.4.3"
+        },
+        "preferred-install": {
+            "*": "dist"
+        },
+        "sort-packages": true,
+        "allow-plugins": {
+            "phpstan/extension-installer": true
+        }
+    },
+    "conflict": {
+        "symfony/symfony": "*"
+    }
+}
