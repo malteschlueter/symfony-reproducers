@@ -1,3 +1,13 @@
 foo_preview_index:
     path: /foo/preview/index
     defaults: { _controller: 'FooPreviewBundle:Preview:index' }
+
+foo_preview_parameter:
+    path: /foo/preview/parameter/{foo}/{page}
+    defaults:
+        _controller: 'FooPreviewBundle:Preview:parameter'
+        foo: 'test123'
+        page: 1
+    requirements:
+        page: '\d+'
+

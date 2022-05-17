@@ -19,6 +19,15 @@ final class PreviewControllerTest extends WebTestCase
         $this->assertSame(PreviewController::class . '::indexAction', $client->getResponse()->getContent());
     }
 
+    public function test_parameter_action(): void
+    {
+        $client = self::createClient();
+
+        $client->request(Request::METHOD_GET, '/foo/preview/parameter/test351/56');
+
+        $this->assertSame(PreviewController::class . '::parameterActiontest35156', $client->getResponse()->getContent());
+    }
+
     public function test_already_exists_with_short_annotation_action(): void
     {
         $client = self::createClient();

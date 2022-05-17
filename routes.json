@@ -31,5 +31,20 @@
         },
         "requirements": [],
         "condition": ""
+    },
+    "foo_preview_parameter": {
+        "path": "\/foo\/preview\/parameter\/{foo}\/{page}",
+        "host": "",
+        "schemes": [],
+        "methods": [],
+        "defaults": {
+            "_controller": "FooBarBaz\\FooPreviewBundle\\Controller\\PreviewController::parameterAction",
+            "foo": "test123",
+            "page": 1
+        },
+        "requirements": {
+            "page": "\\d+"
+        },
+        "condition": ""
     }
 }

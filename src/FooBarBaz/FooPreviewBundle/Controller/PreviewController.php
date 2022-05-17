@@ -15,6 +15,11 @@ final class PreviewController extends AbstractController
         return new Response(__METHOD__);
     }
 
+    public function parameterAction(int $page, string $foo): Response
+    {
+        return new Response(__METHOD__ . $foo . $page);
+    }
+
     /**
      * @Route("/already-exists-with-short-annotation")
      */
