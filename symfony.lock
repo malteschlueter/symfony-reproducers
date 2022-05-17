@@ -29,6 +29,9 @@
     "doctrine/reflection": {
         "version": "1.2.2"
     },
+    "phpstan/phpstan": {
+        "version": "1.6.8"
+    },
     "psr/cache": {
         "version": "1.0.1"
     },
@@ -40,6 +43,9 @@
     },
     "psr/simple-cache": {
         "version": "1.0.1"
+    },
+    "rector/rector": {
+        "version": "0.12-dev"
     },
     "sensio/framework-extra-bundle": {
         "version": "5.4",

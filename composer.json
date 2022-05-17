@@ -13,6 +13,7 @@
         "symfony/yaml": "3.4.*"
     },
     "require-dev": {
+        "rector/rector": "dev-main",
         "symfony/browser-kit": "3.4.*",
         "symfony/phpunit-bridge": "^6.0"
     },
