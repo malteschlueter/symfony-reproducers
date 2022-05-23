@@ -10,4 +10,7 @@ foo_preview_parameter:
         page: 1
     requirements:
         page: '\d+'
+    schemes:
+        - 'http'
+        - 'https'
 

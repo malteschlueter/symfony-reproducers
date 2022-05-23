@@ -12,5 +12,5 @@ return static function (RectorConfig $rectorConfig): void {
 
     // register a single rule
     $rectorConfig->rule(AddRouteAnnotationRector::class);
-    $rectorConfig->symfonyRoutesJson(__DIR__ . '/routes.json');
+    $rectorConfig->symfonyContainerPhp(__DIR__ . '/var/cache/dev/AppDevDebugProjectContainer.php');
 };
