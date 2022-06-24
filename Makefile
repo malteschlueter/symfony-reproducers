@@ -34,3 +34,11 @@ phpunit: ## Run phpunit with coverage
 
 .PHONY: tests
 tests: cs-fix phpunit ## Run all tests
+
+.PHONY: rector
+rector:
+	php vendor/bin/rector --clear-cache
+
+.PHONY: rector-dry-run
+rector-dry-run:
+	php vendor/bin/rector --clear-cache --dry-run --xdebug
