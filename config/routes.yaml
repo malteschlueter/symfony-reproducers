@@ -8,10 +8,10 @@ foo_preview_parameter:
         _controller: 'FooPreviewBundle:Preview:parameter'
         foo: 'test123'
         page: 1
-        1: 23
-        3: 23
     requirements:
         page: '\d+'
+    options:
+        expose: true
     schemes:
         - 'http'
         - 'https'

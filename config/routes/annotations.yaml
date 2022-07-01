@@ -1,3 +1,7 @@
 foo_preview_bundle_controllers:
     resource: ../../src/FooBarBaz/FooPreviewBundle/Controller
     type:     annotation
+
+app_controllers:
+    resource: ../../src/App/Controller
+    type:     annotation
